@@ -69,18 +69,40 @@ body {
     margin: 10vh 5%;
     height: 50vh;
     float: left; }
+  .main h2 {
+    padding: 2vh;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: a_StamperUp;
+    color: #d1a846;
+    text-shadow: 2.5px 4.33px 5px #6a4d06; }
   .main .text {
-    margin: 5vh 0;
+    margin: 0 0;
     float: left;
     width: 65%;
-    height: 60vh;
+    height: 53vh;
     overflow-y: auto; }
     .main .text p {
       padding-right: 5%;
       text-indent: 10%;
       color: #facc5b;
       font-family: 'Poiret One', cursive;
-      font-size: 20px;
+      font-size: 3vh;
       text-shadow: 2.5px 2.33px 5px black; }
+    .main .text .row {
+      margin: 0 auto;
+      height: auto;
+      border-bottom: 4px solid #a27b71; }
+      .main .text .row img {
+        display: block;
+        margin: 10vh 10%;
+        width: 80%;
+        height: auto; }
+    .main .text .clear-fix::after {
+      content: '';
+      display: block;
+      clear: both;
+      height: 0px;
+      visibility: hidden; }
 
 /*# sourceMappingURL=style.css.map */
