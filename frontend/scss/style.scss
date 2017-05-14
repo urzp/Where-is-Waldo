@@ -150,3 +150,20 @@ body{
     }
     
 }
+
+.board{
+    display: none;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    img{
+        display: block;
+        width: 80%;
+        height: auto; 
+        max-height: 90vh; 
+        margin: 2vh 10%;
+        
+    }
+
+}

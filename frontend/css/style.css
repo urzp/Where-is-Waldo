@@ -105,4 +105,17 @@ body {
       height: 0px;
       visibility: hidden; }
 
+.board {
+  display: none;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: auto; }
+  .board img {
+    display: block;
+    width: 80%;
+    height: auto;
+    max-height: 90vh;
+    margin: 2vh 10%; }
+
 /*# sourceMappingURL=style.css.map */
