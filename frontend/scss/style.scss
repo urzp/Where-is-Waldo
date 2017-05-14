@@ -20,7 +20,7 @@ body{
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
-    background-color: #c7b39b;
+    background-color: #000;
 }
 
 .nav{
@@ -152,17 +152,17 @@ body{
 }
 
 .board{
-    display: none;
+    //display: none;
     top: 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: auto;
     img{
         display: block;
-        width: 80%;
+        width: 90%;
         height: auto; 
-        max-height: 90vh; 
-        margin: 2vh 10%;
+        
+        margin: 2vh 5%;
         
     }
 

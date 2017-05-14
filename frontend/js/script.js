@@ -1,17 +1,24 @@
 $('dicument').ready(function(){
     
-    $('body').click(function(){
+
+    
+    $('.row>img').on("click",function(){
+
+        var img = $(this).attr('src');
         
+        $('.board>img').attr('src',img);
          var options = { percent: 10 };
-         $( ".board" ).show( "scale" , options ,500 , callback);
+         $( ".board" ).show( "scale" , options ,500 );
         
-            function callback() {
-              setTimeout(function() {
-                $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
-              }, 1000 );
-            };
-        
-    })
+    });
+    
+    $('body').on("keydown",function(event){
+       if (event.which == 27){
+          $( ".board" ).removeAttr( "style" ).fadeOut(); 
+       };
+    });
+    
+
  
 })
    
