@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'where_is_waldo/home'
 
+  get 'where_is_waldo/games'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
