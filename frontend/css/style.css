@@ -60,7 +60,6 @@ body {
       text-shadow: 2.5px 4.33px 5px black, 0 0 1em #f2e223; }
 
 .main {
-  display: none;
   width: 80%;
   height: 70vh;
   margin: 9vh auto;
@@ -119,6 +118,7 @@ body {
     margin: 2vh 5%; }
 
 .table {
+  display: none;
   overflow-y: auto;
   margin: 10vh auto;
   width: 70%;

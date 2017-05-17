@@ -85,7 +85,7 @@ body{
 }
 
 .main{
-    display: none;
+    //display: none;
     width: 80%;
     height: 70vh;
     margin: 9vh auto;
@@ -173,6 +173,7 @@ body{
 
 
 .table{
+    display: none;
     overflow-y:auto;
     margin: 10vh auto;
     width: 70%;
