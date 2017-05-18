@@ -5,4 +5,7 @@ class WhereIsWaldoController < ApplicationController
   def games
   end
 
+  def records
+  end
+
 end

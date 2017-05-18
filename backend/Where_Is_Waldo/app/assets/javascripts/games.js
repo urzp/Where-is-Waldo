@@ -2,7 +2,7 @@ $('dicument').ready(function(){
 
 
 
-    $('.row>img').on("click",function(){
+    $('.games>.row>img').on("click",function(){
 
         var img = $(this).attr('src');
 
