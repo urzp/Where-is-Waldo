@@ -12,26 +12,18 @@
 
            <img src="/images/waldo.png" alt="">
            <h2>Выбери картинку</h2>
+
            <div class="records">
 
-               <div class="row" id="row_1">
-                   <img src="/images/palace_easy_1.jpg" alt="">
-                   <div class="clear-fix"></div>
-               </div>
+             <% @boards.each do |i| %>
+             <div class="row">
 
-               <div class="row" id="row_2">
-                   <img src="/images/palace_2.jpg" alt="">
-                   <div class="clear-fix"></div>
-               </div>
+               <%= image_tag "/images/" + i.image_name %>
 
-               <div class="row" id="row_3">
-                   <img src="/images/palace_hard_1.jpg" alt="">
-                   <div class="clear-fix"></div>
-               </div>
-               <div class="row" id="row_4">
-                   <img src="/images/palace_wery_hard_1.jpg" alt="">
-                   <div class="clear-fix"></div>
-               </div>
+               <div class="clear-fix"></div>
+             </div>
+             <% end %>
+
            </div>
        </div>
     </div>

@@ -3,6 +3,7 @@ class WhereIsWaldoController < ApplicationController
   end
 
   def games
+    @boards = Board.all
   end
 
   def records
