@@ -1,13 +1,6 @@
 
-<div class="content">
-       <div class="nav">
-            <div class="logo"><img src="/images/logo.png" alt=""></div>
-           <ul>
-               <li><a href="">главная</a></li>
-               <li><a href="">старт</a></li>
-               <li><a href="">таблица рекордов</a></li>
-           </ul>
-       </div>
+
+
        <div class="main">
 
            <img src="/images/waldo.png" alt="">
@@ -15,9 +8,7 @@
            <div class="games">
             <% @boards.each do |i| %>
             <div class="row">
-
               <%= image_tag "/images/" + i.image_name %>
-
               <div class="clear-fix"></div>
             </div>
             <% end %>

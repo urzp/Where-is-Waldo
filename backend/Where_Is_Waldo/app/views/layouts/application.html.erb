@@ -16,8 +16,17 @@
 
 </head>
 <body>
-
-<%= yield %>
+<div class="content">
+  <div class="nav">
+       <div class="logo"><img src="/images/logo.png" alt=""></div>
+      <ul>
+          <li><%= link_to 'Главная', where_is_waldo_home_url, :method => 'get' %></li>
+          <li><%= link_to 'Старт', where_is_waldo_games_path, :method => 'get'  %></li>
+          <li><%= link_to 'Таблица рекордов', where_is_waldo_records_url, :method => 'get'  %></li>
+      </ul>
+  </div>
+  <%= yield %>
+</div>
 
 </body>
 </html>
