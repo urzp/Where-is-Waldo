@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'where_is_waldo/records'
 
+  get 'where_is_waldo/target'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

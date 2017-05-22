@@ -18,4 +18,14 @@ $('dicument').ready(function(){
        };
     });
 
+    $(".board>img").click(function(e){
+      var xClick = e.pageX - $(this).offset().left;
+      var yClick = e.pageY - $(this).offset().top;
+      $.ajax({
+        url: 'target',
+        type: 'GET',
+        data: { xClick: xClick, yClick: yClick }
+      })
+    });
+
 })

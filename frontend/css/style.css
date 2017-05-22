@@ -54,7 +54,7 @@ body {
         color: #fff;
         text-decoration: none;
         text-transform: capitalize;
-        font-family: a_StamperUp;
+        font-family: 'a_StamperUp Bold', arial;
         color: #d1a846; }
     .nav ul li:hover {
       text-shadow: 2.5px 4.33px 5px black, 0 0 1em #f2e223; }
