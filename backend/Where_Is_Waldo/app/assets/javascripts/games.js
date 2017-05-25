@@ -24,13 +24,14 @@ $('dicument').ready(function(){
     $(".board>img").click(function(e){
       var xClick = e.pageX - $(this).offset().left;
       var yClick = e.pageY - $(this).offset().top;
-      
       var board_id = $(".board").attr("id")
-
       $.ajax({
         url: 'target',
         type: 'GET',
-        data: {board_id: board_id , xClick: xClick, yClick: yClick }
+        data: {board_id: board_id , xClick: xClick, yClick: yClick },
+        success: function(res){
+            alert(res.success);
+        }
       })
     });
 
