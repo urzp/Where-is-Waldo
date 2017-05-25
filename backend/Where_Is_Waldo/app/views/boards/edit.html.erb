@@ -1,8 +1,25 @@
 <div class="main">
+  <div class="panel">
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:title, "Название") %>
+      <%= text_field_tag(:title) %>
+      <br>
+      <br>
+      <p><input type="file" name="f">
+      
+      <br>
+      <br>
+      <%= submit_tag("Сохранить") %>
+    <% end %>
+  </div>
     <h2>Редактор "<%= @board.title %>" </h2>
     <div class="games">
      <div class="row" >
+       <% if @board.image_name then %>
        <%= image_tag "/images/" + @board.image_name %>
+       <% else %>
+       <%= image_tag "/images/default_image.png" %>
+       <% end %>
        <div class="clear-fix"></div>
      </div>
 
