@@ -7,7 +7,7 @@
            <h2>Выбери картинку</h2>
            <div class="games">
             <% @boards.each do |i| %>
-            <div class="row">
+            <div class="row" id = <%= i.id %> >
               <%= image_tag "/images/" + i.image_name %>
               <div class="clear-fix"></div>
             </div>
