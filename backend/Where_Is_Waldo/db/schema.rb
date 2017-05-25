@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518170504) do
+ActiveRecord::Schema.define(version: 20170525094116) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20170518170504) do
     t.string   "image_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "targets", force: :cascade do |t|
+    t.integer  "start_point_x"
+    t.integer  "start_point_y"
+    t.integer  "end_point_x"
+    t.integer  "end_point_y"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
