@@ -9,7 +9,7 @@ class BoardsController < ApplicationController
   end
 
   def edit
-    @user = Board.find(params[:id])
+    @board = Board.find(params[:id])
   end
 
 end

@@ -1,10 +1,17 @@
 <div class="main">
+   <div class="panel">
+
+     <%= link_to  new_board_path do %>
+       <div class="new_board">
+        Добвить новое поле
+       </div>
+     <% end %>
+   </div>
     <h2>Выбери картинку для редактирования</h2>
     <div class="games">
      <% @boards.each do |i| %>
      <div class="row" id = <%= i.id %> >
        <%= link_to (image_tag "/images/" + i.image_name ), edit_board_path(i) %>
-       <%= %>
        <div class="clear-fix"></div>
      </div>
      <% end %>
