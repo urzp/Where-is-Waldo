@@ -4,8 +4,6 @@ class CreateBoards < ActiveRecord::Migration
       t.string :title
       t.string :hard_level
       t.string :image_name
-
-
       t.timestamps null: false
     end
   end

@@ -11,7 +11,11 @@
     <div class="games">
      <% @boards.each do |i| %>
      <div class="row" id = <%= i.id %> >
+       <% if @board.image_name then %>
        <%= link_to (image_tag "/images/" + i.image_name ), edit_board_path(i) %>
+       <% else %>
+       <%= link_to (image_tag "/images/default_image.png" ), edit_board_path(i) %>
+       <% end %>
        <div class="clear-fix"></div>
      </div>
      <% end %>

@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170525101611) do
+ActiveRecord::Schema.define(version: 20170526133337) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
     t.string   "hard_level"
     t.string   "image_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.integer  "x"
+    t.integer  "y"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
