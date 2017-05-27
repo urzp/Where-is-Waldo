@@ -8,20 +8,20 @@ class BoardsController < ApplicationController
   def new
     @board = Board.new
     @board.target = Target.new
-    @target = @board.target
     render "edit"
   end
 
   def create
-    puts params
-    #@board  = User.new(user_params)    # Not the final implementation!
-    if @user.save
-      flash[:success] = "Welcome to the Sample App!"
-      sign_in @user
-      redirect_to @user
+
+    @board  = Board.new(board_params)
+
+    if @board.save
+      @boards = Board.all
+      render 'index'
     else
       render 'new'
     end
+
   end
 
   def update
@@ -32,6 +32,11 @@ class BoardsController < ApplicationController
     @target = @board.target
   end
 
+  private
+
+  def board_params
+    params.require(:board).permit(:title, :hard_level, :image_name, :target_attributes=>[:start_point_x, :start_point_y, :end_point_x, :end_point_y] )
+  end
 
 
 end
