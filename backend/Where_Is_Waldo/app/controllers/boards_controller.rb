@@ -7,12 +7,14 @@ class BoardsController < ApplicationController
 
   def new
     @board = Board.new
-
+    @board.target = Target.new
+    @target = @board.target
     render "edit"
   end
 
   def create
-    @board  = User.new(user_params)    # Not the final implementation!
+    puts params
+    #@board  = User.new(user_params)    # Not the final implementation!
     if @user.save
       flash[:success] = "Welcome to the Sample App!"
       sign_in @user
