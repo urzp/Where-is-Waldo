@@ -25,6 +25,10 @@ class BoardsController < ApplicationController
   end
 
   def update
+    @board = Board.find(params[:id])
+    @board.update_attributes(board_params)
+    @boards = Board.all
+    render 'index'
   end
 
   def edit
