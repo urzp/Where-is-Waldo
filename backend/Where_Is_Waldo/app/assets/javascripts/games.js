@@ -35,4 +35,44 @@ $('dicument').ready(function(){
       })
     });
 
+
+    $('.file_feld').change(function(){
+      var val = $(this).val();
+      var split = val.split("\\")
+      $('.file_feld_support').val(split[split.length-1])
+      $('.row > img').attr("src", "/images/" + split[split.length-1] )
+      });
+
+      var selecting = ''
+
+      $('.begin').on('click', function(){
+        selecting = 'begin'
+        $('.begin').addClass('select')
+        $('.end').removeClass('select')
+      })
+
+      $('.end').on('click', function(){
+        selecting = 'end'
+        $('.end').addClass('select')
+        $('.begin').removeClass('select')
+      })
+
+      $('.row > img').on('click', function(e){
+        var xClick = parseInt( e.pageX - $(this).offset().left );
+        var yClick = parseInt( e.pageY - $(this).offset().top );
+
+        if (selecting == "begin") {
+          $(".begin > .input_x").val(xClick)
+          $(".begin > .input_y").val(yClick)
+        }
+
+        if (selecting == "end") {
+          $(".end > .input_x").val(xClick)
+          $(".end > .input_y").val(yClick)
+        }
+
+      })
+
+
+
 })

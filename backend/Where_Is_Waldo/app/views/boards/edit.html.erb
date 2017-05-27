@@ -11,11 +11,11 @@
     <%= f.text_field :hard_level %>
     </div>
     <div class="file"><br>
-    <%= file_field "img",:image_name%>
+    <%= file_field "img",:image_name , class: "file_feld" %>
     </div>
     <div class="input_feeld file_button">
     <%= f.label "Файл картинки" %><br>
-    <%= f.text_field :image_name %>
+    <%= f.text_field :image_name, class: "file_feld_support" %>
     </div>
 
     <br>
@@ -23,17 +23,17 @@
         <div class="input_feeld">
         <%= t.label "Координаты цели" %><br>
         </div>
-        <div class="input_feeld">
+        <div class="input_feeld begin">
         <%= t.label "начало x" %>
-        <%= t.text_field :start_point_x %>
+        <%= t.text_field :start_point_x, class: 'input_x' %>
         <%= t.label "начало y" %>
-        <%= t.text_field :start_point_y %>
+        <%= t.text_field :start_point_y, class: 'input_y' %>
         </div>
-        <div class="input_feeld">
+        <div class="input_feeld end">
         <%= t.label "конец  x" %>&nbsp;&nbsp;
-        <%= t.text_field :end_point_x %>
+        <%= t.text_field :end_point_x, class: 'input_x' %>
         <%= t.label "конец  y" %>&nbsp;&nbsp;
-        <%= t.text_field :end_point_y %>
+        <%= t.text_field :end_point_y, class: 'input_y' %>
         </div>
     <% end %>
 
@@ -44,19 +44,6 @@
 
   <% end %>
 
-    <!--
-    <%= form_tag("/search", method: "put") do %>
-      <%= label_tag(:title, "Название") %>
-      <%= text_field_tag(:title) %>
-      <br>
-      <br>
-      <p><input type="file" name="f">
-
-      <br>
-      <br>
-      <%= submit_tag("Сохранить") %>
-    <% end %>
-  -->
   </div>
     <h2>Редактор "<%= @board.title %>" </h2>
     <div class="games">
