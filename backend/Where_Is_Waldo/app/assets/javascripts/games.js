@@ -22,8 +22,10 @@ $('dicument').ready(function(){
     });
 
     $(".board>img").click(function(e){
-      var xClick = e.pageX - $(this).offset().left;
-      var yClick = e.pageY - $(this).offset().top;
+      var xClick = parseInt( e.pageX - $(this).offset().left ) / $(this).width() ;
+      xClick =  parseInt(xClick*100)
+      var yClick = parseInt( e.pageY - $(this).offset().top) / $(this).height() ;
+      yClick =  parseInt(yClick*100)
       var board_id = $(".board").attr("id")
       $.ajax({
         url: 'target',
@@ -58,8 +60,10 @@ $('dicument').ready(function(){
       })
 
       $('.row > img').on('click', function(e){
-        var xClick = parseInt( e.pageX - $(this).offset().left );
-        var yClick = parseInt( e.pageY - $(this).offset().top );
+        var xClick = parseInt( e.pageX - $(this).offset().left ) / $(this).width() ;
+        xClick =  parseInt(xClick*100)
+        var yClick = parseInt( e.pageY - $(this).offset().top) / $(this).height() ;
+        yClick =  parseInt(yClick*100)
 
         if (selecting == "begin") {
           $(".begin > .input_x").val(xClick)
