@@ -36,6 +36,14 @@ class BoardsController < ApplicationController
     @target = @board.target
   end
 
+  def destroy
+    
+    @board = Board.find(params[:id])
+    @board.destroy
+    @boards = Board.all
+    render 'index'
+  end
+
   private
 
   def board_params

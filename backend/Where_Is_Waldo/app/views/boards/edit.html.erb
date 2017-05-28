@@ -44,6 +44,11 @@
 
   <% end %>
 
+  
+  <%= link_to  "Удалить", @board , method: :delete, class: "delete" %>
+
+
+
   </div>
     <h2>Редактор "<%= @board.title %>" </h2>
     <div class="games">

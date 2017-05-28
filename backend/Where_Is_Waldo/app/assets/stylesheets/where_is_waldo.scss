@@ -159,12 +159,20 @@ img, .panel{
 
 
 
-  .save  input{
+  .save  input, .delete{
+    display: block;
     border-radius: 15px;
+    background-color: #f0f1ad;
     width: 100px;
     margin: 30px auto;
     height: 25px;
     border: none;
+  }
+
+  .delete{
+    text-align: center;
+    padding-top: 5px;
+    height: 20px
   }
 
 
