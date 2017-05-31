@@ -21,6 +21,24 @@ a {
   color: #000;
 }
 
+.clock, .resalt {
+  visibility: hidden;
+  position: fixed;
+  font-size: 7vh;
+  text-shadow: 5px 10px 10px rgb( 0, 0, 0 );
+  font-family: 'a_StamperUp Bold', arial;
+  color: rgb( 500, 168, 70 );
+  top: 3vh;
+  left: 5%;
+  z-index: 3;
+}
+
+.resalt {
+  top: 3vh;
+  left: 30%;
+  color: rgb( 500, 100, 10 );
+}
+
 body{
 margin: 0;
 height: 100vh;

@@ -22,7 +22,7 @@ class WhereIsWaldoController < ApplicationController
      else
        render json: { success: false}
      end
-
-
   end
+
+  
 end
